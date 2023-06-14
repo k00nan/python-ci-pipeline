@@ -1,11 +1,11 @@
-import os,sys,json
-print (   "hello wrodl"        )
+import os, sys, json
+
+print("hello wrodl")
 
 
+print("lll")
+a = 12
 
-print ( "lll"    )
-a =  12
+b = 44
 
-b     =    44
-
-print(f"{a} + {b} = {a+b}"    )
+print(f"{a} + {b} = {a+b}")
