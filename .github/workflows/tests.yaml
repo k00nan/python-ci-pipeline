@@ -28,4 +28,5 @@ jobs:
     - name: Code formatting check
       run: nox --session check_code_formatting --force-color
     - name: Static typing check
-      run: nox --session check_static_typing
+      run: nox --session check_static_typing --force-color
+      
