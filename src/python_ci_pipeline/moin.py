@@ -1,3 +1,4 @@
+import console
 import os, sys, json
 
 print("hello wrodl")
