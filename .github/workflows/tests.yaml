@@ -27,3 +27,6 @@ jobs:
         pipx install nox==2023.4.22
     - name: Code formatting check
       run: nox --session check_code_formatting --force-color
+    - name: Static typing check
+      run: nox --session check_static_typing --force-color
+      
