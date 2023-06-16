@@ -21,3 +21,9 @@ def format_code(session):
 def check_static_typing(session):
     session.run("poetry", "install", "--only", "static_type_checking", external=True)
     session.run("mypy", ".", external=True)
+
+
+@nox.session(python=["3.10"])
+def lint(session):
+    session.run("poetry", "install", "--only", "linting", external=True)
+    session.run("ruff", ".", external=True)
