@@ -30,3 +30,7 @@ build-backend = "poetry.core.masonry.api"
 target-version = ["py310"]
 line-length = 88
 verbose = true
+
+[tool.isort]
+profile = "black"
+verbose = true
