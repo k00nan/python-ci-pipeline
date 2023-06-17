@@ -87,6 +87,7 @@ testpaths = [
     "tests",
 ]
 
+
 [tool.coverage.paths]
 source = [
     "python_ci_pipeline",
