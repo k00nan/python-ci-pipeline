@@ -6,9 +6,6 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/k00nan/python-ci-pipeline"
 authors = ["kenan <kenan.catovic@hm.edu>"]
-packages = [
-    {include = "python_ci_pipeline", from = "src"}
-]
 
 
 [tool.poetry.dependencies]
