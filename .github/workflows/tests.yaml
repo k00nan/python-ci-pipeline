@@ -31,3 +31,5 @@ jobs:
       run: nox --session check_static_typing --force-color
     - name: Linting
       run: nox --session lint --force-color
+    - name: Unit Testing
+      run: nox --session run_unit_tests --force-color
