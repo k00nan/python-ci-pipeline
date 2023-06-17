@@ -1,3 +1,6 @@
+def moin() -> str:
+    return "moin"
+
 print("hello wrodl")
 
 

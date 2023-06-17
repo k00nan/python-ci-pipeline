@@ -5,8 +5,10 @@ description = ""
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/k00nan/python-ci-pipeline"
-keywords = ["hypermodern"]
 authors = ["kenan <kenan.catovic@hm.edu>"]
+packages = [
+    {include = "python_ci_pipeline", from = "src"}
+]
 
 
 [tool.poetry.dependencies]
@@ -19,6 +21,8 @@ nox = "^2023.4.22"
 isort = "^5.12.0"
 mypy = "^1.3.0"
 ruff = "^0.0.272"
+pytest = "^7.3.2"
+pytest-cov = "^4.1.0"
 
 
 [tool.poetry.group.formatting.dependencies]
@@ -32,6 +36,11 @@ mypy = "^1.3.0"
 
 [tool.poetry.group.linting.dependencies]
 ruff = "^0.0.272"
+
+
+[tool.poetry.group.testing.dependencies]
+pytest = "^7.3.2"
+pytest-cov = "^4.1.0"
 
 
 [build-system]
@@ -69,3 +78,25 @@ ignore = [
     "S101",  # use of "assert" flagged by bandit, needed for tests
 ]
 target-version = "py310"
+
+
+[tool.pytest.ini_options]
+minversion = 7.0
+addopts = "--cov --ignore=noxfile.py"
+testpaths = [
+    "tests",
+]
+
+[tool.coverage.paths]
+source = [
+    "python_ci_pipeline",
+]
+
+
+[tool.coverage.run]
+branch = true
+
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100

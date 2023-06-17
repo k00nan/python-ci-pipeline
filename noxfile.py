@@ -27,3 +27,9 @@ def check_static_typing(session):
 def lint(session):
     session.run("poetry", "install", "--only", "linting", external=True)
     session.run("ruff", ".", external=True)
+
+
+@nox.session(python=["3.10"])
+def run_unit_tests(session):
+    session.run("poetry", "install", "--only", "testing", external=True)
+    session.run("pytest", ".", external=True)
