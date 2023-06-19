@@ -9,9 +9,9 @@ from python_ci_pipeline.greeting import greeting
     "name, expected_result",
     [
         ("Amela", "Hallo, Amela!"),
-        ("kenan", "Hallo, kenan!"),
+        ("damir", "Hallo, damir!"),
         ("2", "Hallo, 2!"),
-        ("", "Hallo, !"),
+        ("", "Hallo, kenan!"),
     ],
 )
 def test_greeting(name: str, expected_result: str) -> None:
